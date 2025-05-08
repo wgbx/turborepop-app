@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next'
+import './globals.css'
 import { titleKeys } from 'constant'
 
 export const metadata: Metadata = {
@@ -12,13 +12,11 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
-      <body className="dasdasfasfa">
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
-  );
+  )
 }
