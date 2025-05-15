@@ -1,5 +1,10 @@
 export const enum titleKeys {
-  DEFAULT = '微光北下',
+  DEFAULT = 'wgbx',
   HOME = 'home',
   ABOUT = 'user',
+}
+
+export const enum routerKeys {
+  HOME = '/home',
+  ABOUT = '/about',
 }

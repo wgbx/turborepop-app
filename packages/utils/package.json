@@ -1,0 +1,13 @@
+{
+  "name": "utils",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./index.ts",
+  "license": "MIT",
+  "peerDependencies": {
+    "ui": "workspace:*",
+    "next": "^15.3.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
