@@ -1,6 +1,11 @@
+'use client'
+
 import Image, { type ImageProps } from "next/image";
 import { Button } from "@repo/ui/button";
 import styles from "./page.module.css";
+import {
+  cloneDeep,
+  uniq} from './utils';
 
 type Props = Omit<ImageProps, "src"> & {
   srcLight: string;
@@ -18,6 +23,44 @@ const ThemeImage = (props: Props) => {
   );
 };
 
+const LodashExamples = () => {
+  // 1. Array deduplication
+  const arr = [1, 2, 2, 3];
+  const uniqueArr = uniq(arr);
+
+  // 2. Deep clone object
+  // const originalObj = { a: 1, b: { c: 2 } };
+  // const clonedObj = cloneDeep(originalObj);
+  // const isDeepCloned = clonedObj.b !== originalObj.b;
+
+  return (
+    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
+      <h1>Lodash-es Examples in React</h1>
+
+      <div style={{ marginBottom: '30px', padding: '15px', border: '1px solid #eee' }}>
+        <h2>1. Array Deduplication (uniq)</h2>
+        <p>Original: {JSON.stringify(arr)}</p>
+        <p>Deduplicated: {JSON.stringify(uniqueArr)}</p>
+      </div>
+
+      <div style={{ marginBottom: '30px', padding: '15px', border: '1px solid #eee' }}>
+        <h2>1. Array Deduplication (uniq)</h2>
+        <p>Original: {JSON.stringify(arr)}</p>
+        <p>Deduplicated: {JSON.stringify(uniqueArr)}</p>
+      </div>
+
+      {/* <div style={{ marginBottom: '30px', padding: '15px', border: '1px solid #eee' }}>
+        <h2>2. Deep Clone Object (cloneDeep)</h2>
+        <p>Original: {JSON.stringify(originalObj)}</p>
+        <p>Cloned: {JSON.stringify(clonedObj)}</p>
+        <p>Is deep cloned? {isDeepCloned.toString()}</p>
+      </div> */}
+    </div>
+  );
+};
+
+
+
 export default function Home() {
   return (
     <div className={styles.page}>
@@ -31,6 +74,7 @@ export default function Home() {
           height={38}
           priority
         />
+        <LodashExamples />
         <ol>
           <li>
             Get started by editing <code>apps/web/app/page.tsx</code>
