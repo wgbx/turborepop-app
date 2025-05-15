@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { titleKeys } from 'constant'
+import ClientProvider from '@admin/components/Provider/ClientProvider'
 
 export const metadata: Metadata = {
   title: {
@@ -16,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body id="root">
+        <ClientProvider>{children}</ClientProvider>
+      </body>
     </html>
   )
 }
